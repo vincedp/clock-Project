@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Orbitron", sans-serif;
+}
+
+body {
+  height: 100vh;
+  transition: background-color 0.5s ease;
+}
+
+body.dark-theme {
+  background-color: black;
+}
+
+main {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 5rem;
+}
+main .dark-mode button {
+  border: none;
+  outline: none;
+  padding: 6px;
+  width: 100px;
+  border-radius: 6px;
+  color: white;
+  background-color: black;
+  transition: all 0.5s ease-in;
+}
+main .dark-mode button.dark-theme {
+  color: black;
+  background-color: white;
+}
+main .clock {
+  width: 250px;
+  height: 250px;
+  border-radius: 300px;
+  border: 2px solid gray;
+  position: relative;
+}
+main .clock .center {
+  z-index: 10;
+  border: 3px solid red;
+  background-color: black;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  transition: background-color 0.5s ease-in;
+}
+main .clock .hand {
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3px;
+  height: 65px;
+  background-color: black;
+  transform-origin: bottom center;
+  transition: background-color 0.5s ease-in;
+}
+main .clock .hour {
+  transform: translate(-50%, -100%) rotate(0deg);
+}
+main .clock .minute {
+  height: 100px;
+  transform: translate(-50%, -100%) rotate(0deg);
+}
+main .clock .second {
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 100px;
+  background-color: red;
+}
+main .clock .hour.dark-theme,
+main .clock .center.dark-theme,
+main .clock .minute.dark-theme {
+  background-color: white;
+}
+main .time-container .time {
+  transition: all 0.5s ease-in;
+}
+main .time-container .time.dark-theme {
+  color: white;
+}
+main .time-container .date-container {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  column-gap: 4px;
+}
+main .time-container .date-container .day {
+  color: gray;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+}
+main .time-container .date-container .date {
+  height: 14px;
+  width: 14px;
+  padding: 1px;
+  font-size: 10px;
+  border-radius: 30px;
+  color: white;
+  display: inline-block;
+  background-color: black;
+  transition: all 0.5s ease-in;
+}
+main .time-container .date-container .date.dark-theme {
+  color: grey;
+  background-color: white;
+}
+
+/*# sourceMappingURL=main.css.map */
